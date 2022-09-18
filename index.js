@@ -18,6 +18,11 @@ app.use(express.json());
 app.use(morgan('combined'));
 app.use(express.urlencoded({ extended: false }));
 
+app.use((req,res,next)=>{
+    console.log(`${req.method} ${req.baseUrl}`)
+    next()
+});
+
 
 app.get('/v/api', async (req,res)=>{
     try{
