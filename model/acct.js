@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 const userAndPwd = new mongoose.Schema({
     username: String,
-    pasword: String,
+    password: String,
     cond: {
         type: Number,
         default: 1
